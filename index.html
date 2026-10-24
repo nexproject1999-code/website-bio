@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CV digital dan portofolio Muhammad Hatta, programmer dan founder NEX Project.">
+  <title>Muhammad Hatta — Programmer & NEX Project</title>
+  <style>
+    :root{--bg:#f7f7f5;--paper:#fff;--ink:#171717;--muted:#666;--line:#e4e4e0;--soft:#efefeb;--radius:22px;--max:1080px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    button,a{ -webkit-tap-highlight-color:transparent }
+    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,247,245,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.07)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:15px;font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+    .brand span{display:inline-block;background:var(--ink);color:white;padding:5px 8px;border-radius:7px;margin-right:8px;letter-spacing:-.02em}
+    .navlinks{display:flex;align-items:center;gap:22px;font-size:13px;color:#414141}
+    .navlinks a:hover{color:#000;text-decoration:underline;text-underline-offset:5px}
+    .navcta,.button{display:inline-flex;justify-content:center;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:12px 17px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid var(--ink);transition:transform .18s ease,background .18s ease}
+    .navcta:hover,.button:hover{transform:translateY(-2px);background:#333}
+    .button.secondary{background:transparent;color:var(--ink);border-color:#bdbdb8}
+    .button.secondary:hover{background:var(--soft)}
+    .menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 11px;font-size:18px}
+    main{padding-bottom:70px}
+    .hero{padding:88px 0 64px;display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#555;font-weight:750}
+    .dot{width:7px;height:7px;background:#1e7a45;border-radius:50%;display:inline-block}
+    h1{font-size:clamp(42px,6vw,72px);letter-spacing:-.075em;line-height:1.04;margin:19px 0 20px;font-weight:800}
+    h1 span{display:block;color:#767671}
+    .lead{max-width:610px;font-size:17px;color:#555;margin:0}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}
+    .quick-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
+    .pill{border:1px solid #d9d9d3;background:rgba(255,255,255,.62);padding:7px 11px;border-radius:999px;font-size:12px;color:#4b4b47}
+    .profile-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.035)}
+    .monogram{height:82px;width:82px;background:var(--ink);color:white;border-radius:24px;display:grid;place-items:center;font-size:27px;font-weight:800;letter-spacing:-.07em;margin-bottom:22px}
+    .profile-card h2{font-size:20px;letter-spacing:-.04em;margin:0 0 3px}
+    .profile-role{margin:0;color:var(--muted);font-size:13px}
+    .card-rule{height:1px;background:var(--line);margin:21px 0}
+    .mini-row{display:flex;justify-content:space-between;gap:15px;font-size:13px;padding:7px 0}
+    .mini-row span:first-child{color:var(--muted)}.mini-row strong{text-align:right;font-weight:650}
+    section{padding:50px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:25px}
+    .section-label{font-size:12px;color:#777;text-transform:uppercase;letter-spacing:.12em;font-weight:750;margin:0 0 8px}
+    h2.section-title{font-size:clamp(27px,4vw,38px);letter-spacing:-.06em;line-height:1.15;margin:0}
+    .section-intro{max-width:450px;color:#666;font-size:14px;margin:0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:25px}
+    .panel h3{font-size:18px;letter-spacing:-.035em;margin:0 0 10px}
+    .panel p{font-size:14px;color:#5f5f5a;margin:0}
+    .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+    .tag{font-size:12px;padding:7px 10px;background:var(--soft);border-radius:9px;color:#333}
+    .experience-list{display:grid;gap:12px}
+    .experience{display:grid;grid-template-columns:1fr auto;gap:18px;border-bottom:1px solid var(--line);padding:15px 0}
+    .experience:first-child{padding-top:0}.experience:last-child{border:0;padding-bottom:0}
+    .experience strong{display:block;font-size:14px}.experience p{color:#666;font-size:13px;margin:4px 0 0}.duration{font-size:12px;color:#666;white-space:nowrap}
+    .project-card{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:white}
+    .project-visual{min-height:335px;background:linear-gradient(140deg,#d8d0bd,#a7a08e);position:relative;display:flex;align-items:center;justify-content:center;padding:28px;overflow:hidden}
+    .browser{width:100%;max-width:390px;background:#fff;border-radius:12px;box-shadow:0 24px 70px rgba(0,0,0,.18);overflow:hidden;transform:rotate(-2deg)}
+    .browser-top{height:27px;background:#f2f1ed;border-bottom:1px solid #deddd8;display:flex;align-items:center;gap:5px;padding:0 10px}
+    .browser-top i{width:6px;height:6px;background:#c4c3bd;border-radius:50%}
+    .cafe-preview{padding:18px;color:#2d2a24;font-family:Georgia,serif}
+    .cafe-nav{display:flex;justify-content:space-between;font-size:10px;font-weight:700;letter-spacing:.04em}
+    .cafe-hero{margin-top:18px;background:linear-gradient(150deg,#b39b79,#e9dfcd);height:126px;display:flex;flex-direction:column;justify-content:end;padding:14px;color:white}
+    .cafe-hero small{font-family:Arial,sans-serif;text-transform:uppercase;font-size:7px;letter-spacing:.14em}
+    .cafe-hero b{font-size:27px;line-height:1.05;margin-top:4px}
+    .coffee-cups{display:flex;gap:8px;margin-top:10px}
+    .cup{height:49px;flex:1;border-radius:6px;background:linear-gradient(150deg,#d4b994,#8c6a4b);position:relative}
+    .cup:nth-child(2){background:linear-gradient(150deg,#efe3ce,#af8d62)}.cup:nth-child(3){background:linear-gradient(150deg,#6f4e34,#c5a67f)}
+    .project-info{padding:30px;display:flex;flex-direction:column;justify-content:center}
+    .status{display:inline-flex;align-self:flex-start;border:1px solid #ddd;padding:5px 9px;border-radius:999px;font-size:11px;color:#51514b;margin-bottom:14px}
+    .project-info h3{font-size:28px;letter-spacing:-.06em;margin:0 0 10px}
+    .project-info p{margin:0;color:#60605a;font-size:14px}
+    .project-meta{display:grid;grid-template-columns:90px 1fr;gap:7px;font-size:13px;margin:20px 0}.project-meta span{color:#777}.project-meta strong{font-weight:650}
+    .project-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:4px}
+    .note{font-size:12px;color:#777;margin-top:16px}
+    .contact-box{background:#181818;color:#fff;border-radius:var(--radius);padding:34px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .contact-box h2{font-size:clamp(25px,3vw,35px);line-height:1.15;letter-spacing:-.06em;margin:0 0 9px}.contact-box p{margin:0;color:#c6c6c1;font-size:14px;max-width:530px}
+    .contact-actions{display:flex;gap:9px;flex-wrap:wrap;flex-shrink:0}.contact-box .button{background:white;color:#111;border-color:white}.contact-box .button.secondary{background:transparent;border-color:#666;color:white}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:#777;font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease}.reveal.visible{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+    @media(max-width:780px){.hero{grid-template-columns:1fr;gap:25px;padding:60px 0 34px}.profile-card{max-width:none}.navlinks{display:none;position:absolute;left:20px;right:20px;top:66px;background:white;border:1px solid var(--line);border-radius:14px;padding:16px;flex-direction:column;align-items:stretch;gap:15px;box-shadow:0 12px 35px rgba(0,0,0,.07)}.navlinks.open{display:flex}.navcta{display:none}.menu-btn{display:block}.grid-2{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.project-card{grid-template-columns:1fr}.project-visual{min-height:280px}.contact-box{align-items:flex-start;flex-direction:column}.contact-actions{width:100%}}
+    @media(max-width:420px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero{padding-top:45px}h1{font-size:43px}.panel,.profile-card,.project-info,.contact-box{padding:21px}.project-visual{padding:20px;min-height:245px}.cafe-hero{height:105px}.cafe-hero b{font-size:23px}.experience{grid-template-columns:1fr;gap:3px}.duration{text-align:left}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Muhammad Hatta, kembali ke beranda"><span>MH</span>Muhammad Hatta</a>
+    <nav class="navlinks" id="navlinks" aria-label="Navigasi utama">
+      <a href="#profil">Profil</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <a class="navcta" href="https://wa.me/6289679434870?text=Halo%20Hatta%2C%20saya%20ingin%20berdiskusi%20tentang%20proyek." target="_blank" rel="noopener">Chat Sekarang ↗</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main id="home">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="main-title">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Programmer · Riau, Indonesia</div>
+        <h1 id="main-title">Muhammad Hatta<span>Programmer &amp; Founder of NEX Project</span></h1>
+        <p class="lead">Saya belajar pemrograman secara mandiri dan membangun proyek website untuk mengembangkan kemampuan serta membantu UMKM memenuhi kebutuhan digitalnya.</p>
+        <div class="hero-actions">
+          <a class="button" href="#proyek">Lihat Proyek ↘</a>
+          <a class="button secondary" href="https://wa.me/6289679434870?text=Halo%20Hatta%2C%20saya%20ingin%20berdiskusi%20tentang%20proyek." target="_blank" rel="noopener">Chat Sekarang ↗</a>
+        </div>
+        <div class="quick-facts"><span class="pill">Belajar mandiri</span><span class="pill">Web Development</span><span class="pill">Proyek personal</span></div>
+      </div>
+      <aside class="profile-card" aria-label="Ringkasan profil">
+        <div class="monogram" aria-hidden="true">MH</div>
+        <h2>Muhammad Hatta</h2>
+        <p class="profile-role">Programmer · Founder of NEX Project</p>
+        <div class="card-rule"></div>
+        <div class="mini-row"><span>Lokasi</span><strong>Riau, Indonesia</strong></div>
+        <div class="mini-row"><span>Fokus</span><strong>Website &amp; solusi digital</strong></div>
+        <div class="mini-row"><span>Pengalaman belajar coding</span><strong>± 5 bulan</strong></div>
+        <div class="mini-row"><span>GitHub</span><strong><a href="https://github.com/nexproject1999-code" target="_blank" rel="noopener">Lihat profil ↗</a></strong></div>
+      </aside>
+    </section>
+
+    <section id="profil" class="reveal">
+      <div class="section-head"><div><p class="section-label">01 / Profil</p><h2 class="section-title">Tentang Saya</h2></div><p class="section-intro">Ringkas tentang latar belakang, minat, dan hal yang sedang saya kembangkan.</p></div>
+      <div class="grid-2">
+        <article class="panel"><h3>Latar Belakang</h3><p>Saya berasal dari Riau dan belajar pemrograman secara mandiri. Saat ini saya berfokus pada pengembangan website dan membangun proyek untuk melatih kemampuan teknis.</p></article>
+        <article class="panel"><h3>Minat</h3><p>Saya tertarik pada teknologi, bisnis, dan pasar modal. Saya juga senang mencoba hal baru dan belajar dengan membangun proyek secara langsung.</p></article>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="section-head"><div><p class="section-label">02 / Keahlian</p><h2 class="section-title">Skills</h2></div><p class="section-intro">Teknologi dan kemampuan yang sedang saya praktikkan dan kembangkan.</p></div>
+      <div class="grid-2">
+        <article class="panel"><h3>Hard Skills</h3><p>Masih pada tingkat dasar dan terus dikembangkan melalui latihan serta proyek mandiri.</p><div class="tag-list"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">FastAPI</span><span class="tag">Git</span><span class="tag">GitHub</span></div></article>
+        <article class="panel"><h3>Soft Skills</h3><p>Kemampuan yang saya gunakan dan terus latih saat mengerjakan proyek.</p><div class="tag-list"><span class="tag">Problem Solving</span><span class="tag">Communication</span><span class="tag">Teamwork</span></div></article>
+      </div>
+    </section>
+
+    <section id="pengalaman" class="reveal">
+      <div class="section-head"><div><p class="section-label">03 / Pengalaman</p><h2 class="section-title">Perjalanan Belajar</h2></div><p class="section-intro">Pengalaman saat ini berfokus pada pembelajaran mandiri dan proyek demo.</p></div>
+      <article class="panel experience-list">
+        <div class="experience"><div><strong>Pemrograman &amp; Web Development</strong><p>Belajar mandiri, mencoba teknologi web, dan membangun proyek demo.</p></div><span class="duration">± 5 bulan</span></div>
+        <div class="experience"><div><strong>Pasar Modal</strong><p>Mempelajari pasar modal dan analisis investasi sebagai minat pribadi.</p></div><span class="duration">± 1 tahun</span></div>
+        <p class="note">Saya belum memiliki proyek klien berbayar. Proyek pada portofolio ini merupakan demo atau proyek mandiri.</p>
+      </article>
+    </section>
+
+    <section id="proyek" class="reveal">
+      <div class="section-head"><div><p class="section-label">04 / Portofolio</p><h2 class="section-title">Proyek Pilihan</h2></div><p class="section-intro">Saat ini saya menampilkan satu proyek demo website coffee shop.</p></div>
+      <article class="project-card">
+        <div class="project-visual" aria-label="Preview ilustratif website coffee shop">
+          <div class="browser">
+            <div class="browser-top"><i></i><i></i><i></i></div>
+            <div class="cafe-preview">
+              <div class="cafe-nav"><span>KOPI SELA</span><span>MENU　 CERITA</span></div>
+              <div class="cafe-hero"><small>Ruang untuk menikmati waktu</small><b>Secangkir jeda.</b></div>
+              <div class="coffee-cups"><div class="cup"></div><div class="cup"></div><div class="cup"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="status">Proyek demo mandiri</span>
+          <h3>Website Coffee Shop — Kopi Sela</h3>
+          <p>Demo website kedai kopi dengan menu digital, pilihan kategori, keranjang pesanan, dan tombol pesan melalui WhatsApp.</p>
+          <div class="project-meta"><span>Tujuan</span><strong>Contoh website untuk bisnis coffee shop</strong><span>Teknologi</span><strong>HTML, CSS, JavaScript</strong><span>Status</span><strong>Demo</strong></div>
+          <div class="project-actions">
+            <a class="button" href="https://nexproject1999-code.github.io/porfolio-nex-project/index%284%29.html" target="_blank" rel="noopener">Lihat Demo ↗</a>
+            <a class="button secondary" href="https://github.com/nexproject1999-code" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+          <p class="note">Kopi Sela adalah brand fiktif untuk portofolio, bukan klien nyata. Fitur pemesanan menggunakan demo dan perlu disesuaikan sebelum dipakai bisnis sungguhan.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="kontak" class="reveal">
+      <div class="contact-box">
+        <div><p class="section-label" style="color:#bdbdb7">05 / Kontak</p><h2>Ingin membahas sebuah proyek?</h2><p>Hubungi saya untuk berdiskusi tentang website atau kebutuhan digital bisnis. Kita bisa membahas kebutuhan dan ruang lingkupnya terlebih dahulu.</p></div>
+        <div class="contact-actions"><a class="button" href="https://wa.me/6289679434870?text=Halo%20Hatta%2C%20saya%20ingin%20berdiskusi%20tentang%20proyek." target="_blank" rel="noopener">Chat WhatsApp ↗</a><a class="button secondary" href="https://github.com/nexproject1999-code" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Muhammad Hatta</span><span>Digital CV &amp; Portfolio</span></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const navlinks=document.getElementById('navlinks');
+  menuBtn.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
+  navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
+</script>
+</body>
+</html>
